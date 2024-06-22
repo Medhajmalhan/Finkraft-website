@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #0175C2;
+    color: white;
+    padding: 20px;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: #00509e;
+    color: white;
+  }
+  
+  .hero .cta-button {
+    background: #FF9800;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  section {
+    padding: 50px 20px;
+  }
+  
+  .feature, .client-logos img, blockquote {
+    display: inline-block;
+    margin: 20px;
+    vertical-align: top;
+  }
+  
+  footer {
+    background: #f8f8f8;
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  footer form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  footer label {
+    display: block;
+    margin-top: 20px;
+  }
+  
+  footer input, footer textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+  }
+  
+  footer button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #0175C2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+  
