@@ -6,6 +6,7 @@ class DataTablePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Data Table Example'),
+        centerTitle: true,
         actions: [
           IconButton(
             icon: Icon(Icons.logout),
@@ -17,29 +18,64 @@ class DataTablePage extends StatelessWidget {
         ],
       ),
       body: SingleChildScrollView(
-        child: DataTable(
-          columns: const <DataColumn>[
-            DataColumn(label: Text('Company')),
-            DataColumn(label: Text('Revenue')),
-            DataColumn(label: Text('Profit')),
-          ],
-          rows: const <DataRow>[
-            DataRow(cells: <DataCell>[
-              DataCell(Text('Company A')),
-              DataCell(Text('\$100,000')),
-              DataCell(Text('\$20,000')),
-            ]),
-            DataRow(cells: <DataCell>[
-              DataCell(Text('Company B')),
-              DataCell(Text('\$120,000')),
-              DataCell(Text('\$25,000')),
-            ]),
-            DataRow(cells: <DataCell>[
-              DataCell(Text('Company C')),
-              DataCell(Text('\$80,000')),
-              DataCell(Text('\$15,000')),
-            ]),
-          ],
+        padding: EdgeInsets.all(16.0),
+        child: Card(
+          elevation: 4,
+          child: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Financial Data Summary',
+                  style: TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                SizedBox(height: 20),
+                DataTable(
+                  columns: <DataColumn>[
+                    DataColumn(
+                      label: Text(
+                        'Company',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                    DataColumn(
+                      label: Text(
+                        'Revenue',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                    DataColumn(
+                      label: Text(
+                        'Profit',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                  ],
+                  rows: <DataRow>[
+                    DataRow(cells: <DataCell>[
+                      DataCell(Text('Company A')),
+                      DataCell(Text('\$100,000')),
+                      DataCell(Text('\$20,000')),
+                    ]),
+                    DataRow(cells: <DataCell>[
+                      DataCell(Text('Company B')),
+                      DataCell(Text('\$120,000')),
+                      DataCell(Text('\$25,000')),
+                    ]),
+                    DataRow(cells: <DataCell>[
+                      DataCell(Text('Company C')),
+                      DataCell(Text('\$80,000')),
+                      DataCell(Text('\$15,000')),
+                    ]),
+                  ],
+                ),
+              ],
+            ),
+          ),
         ),
       ),
     );
